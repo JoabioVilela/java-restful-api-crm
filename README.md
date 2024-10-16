@@ -2,7 +2,7 @@
 
 Tecnologias e Metodologias:
 
-- Java 17, Maven, Spring, Basic Auth, DTO, Mapper, Hibernate, MySQL.
+- Java 17, Maven, Spring Framework, Basic Auth, DTO, Mapper, Hibernate, MySQL.
 
 Hoje, 13/10/2024, este repositório contém uma aplicação web em Java com endpoints que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets de um CRM.
 
