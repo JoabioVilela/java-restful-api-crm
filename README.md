@@ -15,3 +15,11 @@ Esta aplicação contempla recursos como validações, tratamento de exceções,
 Para realizar testes com clientes HTTP basta clonar o repositório, iniciar o serviço banco de dados MySQL e executar a aplicação.
 
 Caso haja alguma dúvida entre em contato: joabio.vilela@gmail.com
+
+Implementações futuras:
+
+- frontend com Angular
+
+- microsserviços com RabbitMQ
+
+- testes unitários com JUnit
