@@ -18,8 +18,8 @@ Caso haja alguma dúvida entre em contato: joabio.vilela@gmail.com
 
 Implementações futuras:
 
-- frontend com Angular
-
 - microsserviços com RabbitMQ
 
 - testes unitários com JUnit
+
+- frontend com Angular
