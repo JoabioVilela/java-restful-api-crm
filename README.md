@@ -12,7 +12,7 @@ No arquivo src/main/resources/application-dev.properties contém as configuraç�
 
 Esta aplicação contempla recursos como validações, tratamento de exceções, mensageria com 2 níveis de resiliência, Dead Letter Queue, autenticação e controle de acesso, entre outros.
 
-Para realizar testes com clientes HTTP basta clonar o repositório, iniciar o serviço de banco de dados MySQL através do comando `docker compose up -d`, iniciar o serviço de RabbitMQ através do comando `docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management` e executar a aplicação que estará disponível em localhost na porta `8080, e o Swagger UI estará disponível em `http://localhost:8080/swagger-ui/index.html`.
+Para realizar testes com clientes HTTP basta clonar o repositório, iniciar o serviço de banco de dados MySQL através do comando `docker compose up -d`, iniciar o serviço de RabbitMQ através do comando `docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management` e executar a aplicação que estará disponível em localhost na porta `8080`, e o Swagger UI estará disponível em `http://localhost:8080/swagger-ui/index.html`.
 
 Caso haja alguma dúvida entre em contato: joabio.vilela@gmail.com
 
