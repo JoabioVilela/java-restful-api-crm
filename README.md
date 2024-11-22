@@ -4,7 +4,7 @@ Tecnologias e Metodologias:
 
 - Java 17, Microsserviços, RabbitMQ, Swagger UI, Maven, Spring Framework, Basic Auth, DTO, Mapper, Hibernate, MySQL.
 
-Hoje, 22/11/2024, este repositório contém uma aplicação web em Java com endpoints que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets de um CRM.
+Hoje, 22/11/2024, este repositório contém uma aplicação web em Java com endpoints que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets de um CRM, e a cada novo cadastro é enviada uma mensagem via RabbitMQ para um microsserviço que notifica o usuário vinculado ao cadastro.
 
 No raiz do projeto há um arquivo compose.yaml contendo o serviço MySQL.
 
