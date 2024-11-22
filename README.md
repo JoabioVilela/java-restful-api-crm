@@ -10,7 +10,7 @@ No raiz do projeto há um arquivo compose.yaml contendo o serviço MySQL.
 
 No arquivo src/main/resources/application-dev.properties contém as configurações de acesso ao banco de dados e do RabbitMQ.
 
-Esta aplicação contempla recursos como validações, tratamento de exceções, mensageria com 2 níveis de resiliência, Dead Letter Queue, autenticação e controle de acesso, entre outros.
+Esta aplicação contempla recursos como mensageria com 2 níveis de resiliência, Dead Letter Queue, validações, tratamento de exceções, autenticação e controle de acesso, entre outros.
 
 Para realizar testes com clientes HTTP basta clonar o repositório, iniciar o serviço de banco de dados MySQL através do comando `docker compose up -d` no raiz do projeto, iniciar o serviço de RabbitMQ através do comando `docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management`, iniciar o microsserviço de notificação SMS que está está disponível no repositório [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms) e executar este microsserviço (# Microsserviço CRM - Backend Java API RESTful) que estará disponível em localhost na porta `8080`.
 
