@@ -1,7 +1,8 @@
-package com.joabio.crm.client;
+package com.joabio.crm.entity;
 
 import org.hibernate.validator.constraints.Length;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
@@ -24,7 +25,7 @@ public class Ticket {
     private int id;
 
     @NotBlank
-    @NotNull
+    @NotNull(message = "O título do ticket não pode ser nulo")
     @Length(min = 5, max = 30)
     @Column(length = 30, nullable = false)
     private String title;
@@ -36,6 +37,7 @@ public class Ticket {
     private String descricao;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JsonManagedReference
     @OrderBy("id ASC")
     @JoinColumn(name = "client_id", nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)

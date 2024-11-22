@@ -1,4 +1,4 @@
-package com.joabio.crm.client.dto;
+package com.joabio.crm.dto;
 
 import java.util.List;
 

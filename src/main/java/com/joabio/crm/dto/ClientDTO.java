@@ -1,4 +1,4 @@
-package com.joabio.crm.client.dto;
+package com.joabio.crm.dto;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public record ClientDTO(
         @JsonProperty("_id") Long id,
-        String name, String cpf, String category, List<TicketDTO> tickets) {
+        String name, String cpf, String telefone, String category, List<TicketDTO> tickets) {
 }

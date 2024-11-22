@@ -1,4 +1,4 @@
-package com.joabio.crm.client.dto.mapper;
+package com.joabio.crm.dto.mapper;
 
 import java.util.List;
 import java.util.Set;
@@ -6,12 +6,12 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
-import com.joabio.crm.client.Client;
-import com.joabio.crm.client.Ticket;
-import com.joabio.crm.client.dto.ClientDTO;
-import com.joabio.crm.client.dto.ClientRequestDTO;
-import com.joabio.crm.client.dto.TicketDTO;
-import com.joabio.crm.client.enums.Category;
+import com.joabio.crm.dto.ClientDTO;
+import com.joabio.crm.dto.ClientRequestDTO;
+import com.joabio.crm.dto.TicketDTO;
+import com.joabio.crm.entity.Client;
+import com.joabio.crm.entity.Ticket;
+import com.joabio.crm.enums.Category;
 
 /**
  * Class to map the Client entity to the ClientRequestDTO and vice-versa.
@@ -25,6 +25,7 @@ public class ClientMapper {
         Client client = new Client();
         client.setName(clientRequestDTO.name());
         client.setCpf(clientRequestDTO.cpf());
+        client.setTelefone(clientRequestDTO.telefone());
         client.setCategory(convertCategoryValue(clientRequestDTO.category()));
 
         Set<Ticket> tickets = clientRequestDTO.tickets().stream()
@@ -51,7 +52,7 @@ public class ClientMapper {
                 .stream()
                 .map(ticket -> new TicketDTO(ticket.getId(), ticket.getTitle(), ticket.getDescricao()))
                 .toList();
-        return new ClientDTO(client.getId(), client.getName(), client.getCpf(), client.getCategory().getValue(),
+        return new ClientDTO(client.getId(), client.getName(), client.getCpf(), client.getTelefone(), client.getCategory().getValue(),
                 ticketDTOList);
     }
 

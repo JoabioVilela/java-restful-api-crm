@@ -1,11 +1,11 @@
-package com.joabio.crm.client.enums;
+package com.joabio.crm.enums;
 
-public enum Status {
-    ACTIVE("Active"), INACTIVE("Inactive");
+public enum Category {
+    BRONZE("Bronze"), PRATA("Prata"), OURO("Ouro");
 
     private final String value;
 
-    Status(String value) {
+    Category(String value) {
         this.value = value;
     }
 
@@ -17,4 +17,5 @@ public enum Status {
     public String toString() {
         return value; // required for @ValueOfEnum
     }
+
 }

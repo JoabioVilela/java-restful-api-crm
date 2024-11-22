@@ -1,4 +1,4 @@
-package com.joabio.crm.client;
+package com.joabio.crm.controller;
 
 import java.util.List;
 
@@ -15,9 +15,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.joabio.crm.client.dto.ClientDTO;
-import com.joabio.crm.client.dto.ClientPageDTO;
-import com.joabio.crm.client.dto.ClientRequestDTO;
+import com.joabio.crm.dto.ClientDTO;
+import com.joabio.crm.dto.ClientPageDTO;
+import com.joabio.crm.dto.ClientRequestDTO;
+import com.joabio.crm.service.ClientService;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
@@ -54,9 +55,19 @@ public class ClientController {
         return clientService.findByCpf(cpf);
     }
 
+    @GetMapping("/searchByTelefone")
+    public List<ClientDTO> findByTelefone(@RequestParam @NotNull @NotBlank String telefone) {
+        return clientService.findByTelefone(telefone);
+    }
+
     @GetMapping("/{id}")
     public ClientDTO findById(@PathVariable @Positive @NotNull Long id) {
         return clientService.findById(id);
+    }
+
+    @GetMapping("/searchByIntegrada")
+    public List<ClientDTO> findByIntegrada(@RequestParam @NotNull @NotBlank boolean integrada) {
+        return clientService.findByIntegrada(integrada);
     }
 
     @PostMapping

@@ -1,4 +1,4 @@
-package com.joabio.crm.client.dto;
+package com.joabio.crm.dto;
 
 import org.hibernate.validator.constraints.Length;
 
