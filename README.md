@@ -12,7 +12,13 @@ No raiz do projeto há um arquivo compose.yaml contendo o serviço MySQL.
 
 No arquivo src/main/resources/application-dev.properties contém as configurações de acesso ao banco de dados e do RabbitMQ.
 
-Para realizar testes com clientes HTTP basta clonar o repositório, iniciar o serviço de banco de dados MySQL através do comando `docker compose up -d` no raiz do projeto, iniciar o serviço de RabbitMQ através do comando `docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management`, iniciar o microsserviço de notificação SMS que está está disponível no repositório [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms) e executar este microsserviço (# Microsserviço CRM - Backend Java API RESTful) que estará disponível em localhost na porta `8080`.
+Para realizar testes com clientes HTTP basta:
+
+- clonar o repositório
+- iniciar o serviço de banco de dados MySQL através do comando `docker compose up -d` no raiz do projeto
+- iniciar o serviço de RabbitMQ através do comando `docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management`
+- iniciar o microsserviço de notificação SMS que está está disponível no repositório [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms)
+- executar este microsserviço (# Microsserviço CRM - Backend Java API RESTful) que estará disponível em localhost na porta `8080`
 
 O Swagger UI estará disponível em [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) conforme imagem:
 
