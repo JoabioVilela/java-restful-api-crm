@@ -4,7 +4,7 @@ Tecnologias e Metodologias:
 
 - Java 17, Microsserviços, RabbitMQ, Swagger UI, Maven, Spring Framework, Basic Auth, DTO, Mapper, Hibernate, MySQL.
 
-Hoje, 22/11/2024, este repositório contém uma aplicação web em Java com endpoints que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets com relacionamento OneToMany (um cliente para muitos tickets), e a cada novo cadastro é enviada uma mensagem via RabbitMQ para um microsserviço que notifica o usuário vinculado ao cadastro.
+Hoje, 22/11/2024, este repositório contém uma aplicação web em Java com endpoints que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets com relacionamento OneToMany (um cliente para muitos tickets), e a cada novo cadastro é enviada uma mensagem via RabbitMQ para um microsserviço que notifica ao usuário vinculado ao cadastro.
 
 Esta aplicação contempla recursos como mensageria com 2 níveis de resiliência, Dead Letter Queue, validações, tratamento de exceções, autenticação e controle de acesso, entre outros.
 
@@ -17,7 +17,7 @@ Para realizar testes com clientes HTTP basta:
 - clonar o repositório
 - iniciar o serviço de banco de dados MySQL através do comando `docker compose up -d` no raiz do projeto
 - iniciar o serviço de RabbitMQ através do comando `docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management`
-- iniciar o microsserviço de notificação SMS que está está disponível no repositório [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms)
+- iniciar o microsserviço de notificação SMS que está disponível no repositório [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms)
 - executar este microsserviço (Microsserviço CRM - Backend Java API RESTful) que estará disponível em localhost na porta `8080`
 
 O Swagger UI estará disponível em [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) conforme imagem:
