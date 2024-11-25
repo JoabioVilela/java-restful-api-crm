@@ -120,10 +120,11 @@ Implementações futuras:
 
 ---
 
+### Contato
+
 Se precisar de suporte ou encontrar problemas, entre em contato ou abra uma **Issue** neste repositório.
 
 Atenciosamente,
 
 Joábio Vilela
-
 joabio.vilela@gmail.com
