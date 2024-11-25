@@ -2,32 +2,32 @@
 
 ## Descrição
 
-Este repositório contém uma aplicação web desenvolvida em *Java 17*, projetada para gerenciar um sistema CRM. A aplicação oferece *endpoints RESTful* que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets, com um relacionamento *OneToMany* (um cliente para muitos tickets).
+Este repositório contém uma aplicação web desenvolvida em **Java 17**, projetada para gerenciar um sistema CRM. A aplicação oferece **endpoints RESTful** que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets, com um relacionamento **OneToMany** (um cliente para muitos tickets).
 
-Ao realizar um novo cadastro, uma mensagem é enviada via *RabbitMQ* para um microsserviço de notificação, que informa ao usuário vinculado ao cadastro.
+Ao realizar um novo cadastro, uma mensagem é enviada via **RabbitMQ** para um microsserviço de notificação, que informa ao usuário vinculado ao cadastro.
 
 A aplicação inclui recursos como:
 
-- Mensageria com *Dead Letter Queue* e dois níveis de resiliência.
+- Mensageria com **Dead Letter Queue** e dois níveis de resiliência.
 - Validações e tratamento de exceções.
-- Autenticação com *Basic Auth* e controle de acesso.
-- Uso de *DTOs* e *Mapper* para abstração e eficiência, entre outros.
+- Autenticação com **Basic Auth** e controle de acesso.
+- Uso de **DTOs** e **Mapper** para abstração e eficiência, entre outros.
 
 ## Tecnologias e Ferramentas:
 
 - **Java 17**
 
-- *RabbitMQ*
+- **RabbitMQ**
 
-- *Swagger UI*
+- **Swagger UI**
 
-- *Maven*
+- **Maven**
 
-- *Spring Framework*
+- **Spring Framework**
 
-- *Hibernate*
+- **Hibernate**
 
-- *MySQL*
+- **MySQL**
 
 ---
 
@@ -103,12 +103,12 @@ Exemplo de visualização do Swagger:
 ### Mensageria
 
 - Mensagens são gerenciadas com RabbitMQ e incluem:
-  - *Dead Letter Queue* para processamento de mensagens não entregues.
+  - **Dead Letter Queue** para processamento de mensagens não entregues.
   - Dois níveis de resiliência para alta disponibilidade.
 
 ### Relacionamentos
 
-- Gerenciamento de relacionamento *OneToMany* entre clientes e tickets.
+- Gerenciamento de relacionamento **OneToMany** entre clientes e tickets.
 
 ---
 
@@ -120,7 +120,7 @@ Implementações futuras:
 
 ---
 
-Se precisar de suporte ou encontrar problemas, entre em contato ou abra uma *Issue* neste repositório.
+Se precisar de suporte ou encontrar problemas, entre em contato ou abra uma **Issue** neste repositório.
 
 Atenciosamente,
 
