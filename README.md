@@ -58,7 +58,7 @@ Certifique-se de que você tenha o seguinte instalado em sua máquina:
 
 git clone <URL_DO_REPOSITORIO>
 
-cd <PASTA_DO_REPOSITORIO>
+cd <PASTA_DO_REPOSITORIO>```
 
 isto é:
 
