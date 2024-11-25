@@ -51,11 +51,13 @@ Certifique-se de que você tenha o seguinte instalado em sua máquina:
 bash
 
 git clone <URL_DO_REPOSITORIO>
+
 cd <PASTA_DO_REPOSITORIO>
 
 isto é:
 
 git clone https://github.com/JoabioVilela/java-restful-api-crm
+
 cd java-restful-api-crm
 
 ## 2. Inicie os serviços necessários
