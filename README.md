@@ -23,6 +23,8 @@ A aplicação inclui recursos como:
 *- Hibernate*
 *- MySQL*
 
+---
+
 ## Estrutura do Projeto
 
 ### Configuração
