@@ -112,15 +112,15 @@ Exemplo de visualização do Swagger:
 
 ---
 
-Implementações futuras:
+## Implementações futuras:
 
-- testes unitários com JUnit
+- Testes unitários com JUnit
 
-- frontend com Angular
+- Frontend com Angular
 
 ---
 
-### Contato
+## Contato
 
 Se precisar de suporte ou encontrar problemas, entre em contato ou abra uma **Issue** neste repositório.
 
