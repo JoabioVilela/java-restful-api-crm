@@ -13,7 +13,8 @@
 - [Contato](#contato)
 
 
-- ## Descrição
+
+## Descrição
 
 Este repositório contém uma aplicação web desenvolvida em **Java 17**, projetada para gerenciar um sistema CRM. A aplicação oferece **endpoints RESTful** que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets, com um relacionamento **OneToMany** (um cliente para muitos tickets).
 
@@ -25,6 +26,7 @@ A aplicação inclui recursos como:
 - Validações e tratamento de exceções.
 - Autenticação com **Basic Auth** e controle de acesso.
 - Uso de **DTOs** e **Mapper** para abstração e eficiência, entre outros.
+
 
 ## Tecnologias e Ferramentas:
 
@@ -44,6 +46,7 @@ A aplicação inclui recursos como:
 
 ---
 
+
 ## Estrutura do Projeto
 
 ### Configuração
@@ -52,6 +55,7 @@ A aplicação inclui recursos como:
 - O arquivo `compose.yaml` na raiz do projeto contém o serviço MySQL configurado para execução com Docker Compose.
 
 ---
+
 
 ## Pré-requisitos
 
@@ -62,6 +66,7 @@ Certifique-se de que você tenha o seguinte instalado em sua máquina:
 - Maven
 
 ---
+
 
 ## Como Executar
 
@@ -111,6 +116,7 @@ Exemplo de visualização do Swagger:
 
 ---
 
+
 ## Recursos Adicionais
 
 ### Mensageria
@@ -125,6 +131,7 @@ Exemplo de visualização do Swagger:
 
 ---
 
+
 ## Implementações futuras:
 
 - Testes unitários com JUnit
@@ -132,6 +139,7 @@ Exemplo de visualização do Swagger:
 - Frontend com Angular
 
 ---
+
 
 ## Contato
 
