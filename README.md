@@ -109,7 +109,6 @@ Exemplo de visualização do Swagger:
 ### Relacionamentos
 
 - Gerenciamento de relacionamento *OneToMany* entre clientes e tickets.
-- Se precisar de suporte ou encontrar problemas, entre em contato ou abra uma Issue neste repositório.
 
 ---
 
