@@ -66,7 +66,7 @@ isto é:
 
 `cd java-restful-api-crm`
 
-## 2. Inicie os serviços necessários
+### 2. Inicie os serviços necessários
    
 ### Banco de dados MySQL:
 
@@ -80,13 +80,13 @@ isto é:
 
 Certifique-se de clonar e executar o microsserviço de notificação, disponível no repositório: [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms).
 
-## 3. Compile e execute
+### 3. Compile e execute
    
 Ao executar, este microsserviço (Microsserviço CRM - Backend Java API RESTful) estará disponível em:
 
 `http://localhost:8080`
 
-## 4. Acesse o Swagger UI
+### 4. Acesse o Swagger UI
 
 A documentação interativa dos endpoints pode ser acessada em:
 
