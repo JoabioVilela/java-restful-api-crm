@@ -15,19 +15,19 @@ A aplicação inclui recursos como:
 
 ## Tecnologias e Ferramentas:
 
-*- Java 17*
+- *Java 17*
 
-*- RabbitMQ*
+- *RabbitMQ*
 
-*- Swagger UI*
+- *Swagger UI*
 
-*- Maven*
+- *Maven*
 
-*- Spring Framework*
+- *Spring Framework*
 
-*- Hibernate*
+- *Hibernate*
 
-*- MySQL*
+- *MySQL*
 
 ---
 
