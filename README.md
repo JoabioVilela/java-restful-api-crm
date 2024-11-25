@@ -1,5 +1,4 @@
-# Microsserviço CRM (Customer Relationship Management) - Backend Java API RESTful
-
+# Microsserviço Backend Java API RESTful - CRM (Customer Relationship Management)
 Tecnologias e Metodologias:
 
 - Java 17, Microsserviços, RabbitMQ, Swagger UI, Maven, Spring Framework, Basic Auth, DTO, Mapper, Hibernate, MySQL.
