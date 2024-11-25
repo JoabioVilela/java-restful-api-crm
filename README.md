@@ -68,15 +68,15 @@ isto é:
 
 ### 2. Inicie os serviços necessários
    
-### Banco de dados MySQL:
+- ### Banco de dados MySQL:
 
 `docker compose up -d`
 
-### RabbitMQ:
+- ### RabbitMQ:
 
 `docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management`
 
-### Microsserviço de Notificação (SMS):
+- ### Microsserviço de Notificação (SMS):
 
 Certifique-se de clonar e executar o microsserviço de notificação, disponível no repositório: [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms).
 
