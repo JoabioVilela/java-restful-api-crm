@@ -15,7 +15,7 @@ A aplicação inclui recursos como:
 
 ## Tecnologias e Ferramentas:
 
-- *Java 17*
+- **Java 17**
 
 - *RabbitMQ*
 
@@ -54,7 +54,7 @@ Certifique-se de que você tenha o seguinte instalado em sua máquina:
 
 ### 1. Clone o repositório
 
-bash
+```bash
 
 git clone <URL_DO_REPOSITORIO>
 
