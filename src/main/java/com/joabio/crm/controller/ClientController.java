@@ -19,7 +19,13 @@ import com.joabio.crm.dto.ClientDTO;
 import com.joabio.crm.dto.ClientPageDTO;
 import com.joabio.crm.dto.ClientRequestDTO;
 import com.joabio.crm.service.ClientService;
+import com.joabio.crm.validation.ValidatePagination;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -31,6 +37,7 @@ import jakarta.validation.constraints.Positive;
 @Validated
 @RestController
 @RequestMapping("api/clients")
+@Tag(name = "API Clientes e Tickets (OneToMany)")
 public class ClientController {
 
     private final ClientService clientService;
@@ -40,8 +47,21 @@ public class ClientController {
     }
 
     @GetMapping
-    public ClientPageDTO findAll(@RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int pageSize) {
+    @Operation(summary = "Obter registros de clientes", description = "Retorna todos os registros de clientes com seus respectivos tickets (OneToMany)")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "200 Recuperado com sucesso"),
+        @ApiResponse(responseCode = "404", description = "404 Not found - Os registros de clientes não foram encontrados")
+    })
+    public ClientPageDTO findAll( @RequestParam(defaultValue = "0") 
+        @Parameter(name = "page", description = "O campo page indica o número da página a ser solicitada. A contagem começa em 0, ou seja, 0 representa a primeira página, 1 representa a segunda página, e assim por diante.", example = "4") 
+        int page,
+        @RequestParam(defaultValue = "10") 
+        @Parameter(name = "pageSize", description = "O campo pageSize especifica o número de registros a serem retornados por página. Este valor determina a quantidade máxima de itens exibidos em cada página da resposta. Se não especificado, um valor padrão pode ser aplicado pelo sistema.", example = "10") 
+        int pageSize) {
+
+        ValidatePagination.validatePage(page);
+        ValidatePagination.validatePageSize(pageSize);
+
         return clientService.findAll(page, pageSize);
     }
 

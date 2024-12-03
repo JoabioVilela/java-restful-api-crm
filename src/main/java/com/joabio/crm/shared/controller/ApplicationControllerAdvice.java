@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import com.joabio.crm.exception.InvalidPageException;
+import com.joabio.crm.exception.InvalidPageSizeException;
 import com.joabio.crm.exception.RecordNotFoundException;
 
 import jakarta.validation.ConstraintViolationException;
@@ -39,4 +41,17 @@ public class ApplicationControllerAdvice {
     public String handleConstraintViolationException(ConstraintViolationException e) {
         return "not valid due to validation error: " + e.getMessage();
     }
+
+    @ExceptionHandler(InvalidPageException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public String handleInvalidPageException(InvalidPageException e) {
+        return e.getMessage();
+    }
+
+    @ExceptionHandler(InvalidPageSizeException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public String handleInvalidPageSizeException(InvalidPageSizeException e) {
+        return e.getMessage();
+    }
+    
 }
