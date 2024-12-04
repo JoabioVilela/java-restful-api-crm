@@ -43,13 +43,13 @@ public class ApplicationControllerAdvice {
     }
 
     @ExceptionHandler(InvalidPageException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public String handleInvalidPageException(InvalidPageException e) {
         return e.getMessage();
     }
 
     @ExceptionHandler(InvalidPageSizeException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public String handleInvalidPageSizeException(InvalidPageSizeException e) {
         return e.getMessage();
     }

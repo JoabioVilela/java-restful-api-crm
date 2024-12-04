@@ -47,7 +47,7 @@ public class ClientController {
     }
 
     @GetMapping
-    @Operation(summary = "Obter registros de clientes", description = "Retorna todos os registros de clientes com seus respectivos tickets (OneToMany)")
+    @Operation(summary = "Obter todos os registros de clientes", description = "Retorna todos os registros de clientes com seus respectivos tickets (OneToMany)")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "200 Recuperado com sucesso"),
         @ApiResponse(responseCode = "404", description = "404 Not found - Os registros de clientes não foram encontrados")
