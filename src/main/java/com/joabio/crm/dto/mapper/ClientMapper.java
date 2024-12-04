@@ -13,6 +13,7 @@ import com.joabio.crm.entity.Client;
 import com.joabio.crm.entity.Ticket;
 import com.joabio.crm.enums.Category;
 
+
 /**
  * Class to map the Client entity to the ClientRequestDTO and vice-versa.
  * ModelMapper currently does not support record types.

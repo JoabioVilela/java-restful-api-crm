@@ -1,6 +1,7 @@
 package com.joabio.crm.entity;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import org.hibernate.annotations.SQLDelete;
@@ -157,6 +158,30 @@ public class Client {
         }
         ticket.setClient(null);
         this.tickets.remove(ticket);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Client other = (Client) obj;
+        return id != null && id.equals(other.id) &&
+               name != null && name.equals(other.name) &&
+               cpf != null && cpf.equals(other.cpf) &&
+               telefone != null && telefone.equals(other.telefone) &&
+               category == other.category &&
+               status == other.status &&
+               integrada == other.integrada &&
+               tickets.equals(other.tickets); // Comparação profunda de tickets, se necessário
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, cpf, telefone, category, status, integrada, tickets);
     }
 
 }
