@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
-import com.joabio.crm.agendador.ClientSemIntegracao;
 import com.joabio.crm.config.ConfiguracaoRabbitMQ;
 import com.joabio.crm.entity.Client;
 
@@ -14,7 +13,7 @@ import com.joabio.crm.entity.Client;
 public class NotificacaoSmsRabbitMqService {
 
     private RabbitTemplate rabbitTemplate;
-    private final Logger logger = LoggerFactory.getLogger(ClientSemIntegracao.class);
+    private final Logger logger = LoggerFactory.getLogger(NotificacaoSmsRabbitMqService.class);
 
     public NotificacaoSmsRabbitMqService(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;

@@ -1,7 +1,5 @@
 package com.joabio.crm.security;
 
-import jakarta.servlet.DispatcherType;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,7 +21,7 @@ public class SecurityConfig {
         http
             // Desativa a proteção CSRF para APIs RESTful usando o novo método recomendado
             .csrf(csrf -> csrf.disable()) 
-            .authorizeHttpRequests((authz) -> authz
+            .authorizeHttpRequests(authz -> authz
                 //.requestMatchers("api/clients/**").permitAll()  // Permite acesso sem autenticação
                 .requestMatchers("api/clients/**").authenticated()  // Protege os endpoints api/clients
                 .anyRequest().authenticated()

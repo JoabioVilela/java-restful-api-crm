@@ -21,7 +21,7 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 @Configuration
 public class ConfiguracaoRabbitMQ {
 
-    public static final String EXCHANGE_NAME = "ticket.exchange";
+    public static final String EXCHANGE_NAME = "ticket.queue.exchange";
     public static final String QUEUE_NAME = "ticket.queue";
     public static final String ROUTING_KEY = "ticket.created";
 
@@ -29,7 +29,7 @@ public class ConfiguracaoRabbitMQ {
     public Queue ticketQueue() {
         return QueueBuilder.durable(QUEUE_NAME)
                 .deadLetterExchange("ticket.queue.dlx.ex")
-                .ttl(8000)
+                .ttl(15000)
                 .maxLength(3L)
                 .build();
     }

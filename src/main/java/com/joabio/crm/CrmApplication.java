@@ -31,7 +31,7 @@ public class CrmApplication {
 		clientRepository.deleteAll();
 		for (int i = 1; i < 5; i++) {
 			Client c = new Client();
-			c.setName("Client " + i);
+			c.setName("Cliente " + i);
 			c.setCpf("1234567890" + i);
 			c.setTelefone("7198693993" + i);
 			c.setCategory(Category.BRONZE);

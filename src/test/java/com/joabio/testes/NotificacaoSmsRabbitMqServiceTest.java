@@ -2,7 +2,7 @@ package com.joabio.testes;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.apache.commons.beanutils.BeanUtils;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.AfterEach;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -12,13 +12,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.BeanUtils;
 
 import com.joabio.crm.config.ConfiguracaoRabbitMQ;
 import com.joabio.crm.entity.Client;
@@ -40,7 +40,7 @@ class NotificacaoSmsRabbitMqServiceTest {
     private Client client, expectedClient;
     
     @BeforeEach
-    void setUp() throws IllegalAccessException, InvocationTargetException {
+    void setUp() {
         System.out.println("setUp");
         MockitoAnnotations.openMocks(this);
 
@@ -74,13 +74,14 @@ class NotificacaoSmsRabbitMqServiceTest {
         expectedClient = new Client();
         try {
         // Copia superficial dos atributos simples
-        BeanUtils.copyProperties(expectedClient, client);
+        BeanUtils.copyProperties(client, expectedClient);
         
         // Realize a cópia profunda de coleções
         Set<Ticket> copiedTickets = new HashSet<>();
         for (Ticket ticket : client.getTickets()) {
                 Ticket copiedTicket = new Ticket();
-                BeanUtils.copyProperties(copiedTicket, ticket); // Cópia superficial de Ticket
+                
+                BeanUtils.copyProperties(ticket, copiedTicket); // Cópia superficial de Ticket
                 copiedTickets.add(copiedTicket);
             }
                     expectedClient.setTickets(copiedTickets);
@@ -95,11 +96,12 @@ class NotificacaoSmsRabbitMqServiceTest {
     }
 
     @Test
+    @DisplayName("Teste da função notificar da classe NotificacaoSmsRabbitMqService")
     void testNotificar() {
 
         notificacaoSmsRabbitMqService.notificar(client);
 
-        //client.setTelefone("73986932222");
+        //client.setCpf("99333921990");
 
         verify(rabbitTemplate).convertAndSend(
                 ConfiguracaoRabbitMQ.EXCHANGE_NAME,
@@ -107,7 +109,7 @@ class NotificacaoSmsRabbitMqServiceTest {
                 client
         );
 
-        assertEquals(expectedClient, client, "O estado do objeto foi alterado após a execução!");
+        assertEquals(expectedClient, client, "😱 O estado do objeto foi alterado após o envio para a fila.");
     }
 
 }
