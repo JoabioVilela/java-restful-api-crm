@@ -22,7 +22,7 @@ Ao realizar um novo cadastro, uma mensagem é enviada via **RabbitMQ** para um m
 
 A aplicação inclui recursos como:
 
-- Mensageria com **Dead Letter Queue** e dois níveis de resiliência.
+- Mensageria com **Dead Letter Queue** e 3 níveis de resiliência.
 - Validações e tratamento de exceções.
 - Autenticação com **Basic Auth** e controle de acesso.
 - Uso de **DTOs** e **Mapper** para abstração e eficiência, entre outros.
