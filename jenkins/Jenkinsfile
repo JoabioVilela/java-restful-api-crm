@@ -2,6 +2,13 @@
 pipeline {
     agent any
     stages {
+        stage('Set up MySQL') {
+           steps {
+            script {
+                sh 'docker-compose -f ./docker/compose.yaml up -d'
+               }
+            }
+        }
         stage('Build') {
             steps {
                 sh './scripts/build.sh'
