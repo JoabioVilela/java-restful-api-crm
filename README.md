@@ -102,13 +102,13 @@ Certifique-se de clonar e executar o microsserviço de notificação, disponíve
    
 Ao executar, este microsserviço (Microsserviço CRM - Backend Java API RESTful) estará disponível em:
 
-`http://localhost:8080`
+`http://localhost:9090`
 
 ### 4. Acesse o Swagger UI
 
 A documentação interativa dos endpoints pode ser acessada em:
 
-`http://localhost:8080/swagger-ui/index.html`
+`http://localhost:9090/swagger-ui/index.html`
 
 Exemplo de visualização do Swagger:
 
