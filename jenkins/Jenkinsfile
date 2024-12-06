@@ -1,0 +1,37 @@
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh './scripts/build.sh'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh './scripts/test.sh'
+            }
+        }
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t my-crm-service:latest -f ./docker/Dockerfile .'
+            }
+        }
+        stage('Push Image') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh '''
+                        docker login -u $DOCKER_USER -p $DOCKER_PASS
+                        docker tag my-crm-service:latest joabio/my-crm-service:latest
+                        docker push joabio/my-crm-service:latest
+                    '''
+                }
+            }
+        }
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh './scripts/deploy.sh'
+            }
+        }
+    }
+}

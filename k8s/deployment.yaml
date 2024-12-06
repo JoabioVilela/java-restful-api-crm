@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-crm-service
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-crm-service
+  template:
+    metadata:
+      labels:
+        app: my-crm-service
+    spec:
+      containers:
+        - name: my-crm-service
+          image: joabio/my-crm-service:latest
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1"
+          ports:
+            - containerPort: 9090
