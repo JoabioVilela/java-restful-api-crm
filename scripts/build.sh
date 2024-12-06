@@ -1,5 +1,6 @@
 
 #!/bin/bash
 # Build Script
-# echo "Building project..."
+echo "Building project..."
 # mvn clean package -DskipTests
+mvn clean package
