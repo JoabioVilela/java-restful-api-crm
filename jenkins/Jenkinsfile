@@ -40,5 +40,13 @@ pipeline {
                 sh './scripts/deploy.sh'
             }
         }
+        stage('List Files') {
+            steps {
+                script {
+                    sh 'ls -al ./target'
+                    }
+            }
+        }
+
     }
 }
