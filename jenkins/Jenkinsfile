@@ -5,7 +5,7 @@ pipeline {
         stage('Set up MySQL') {
            steps {
             script {
-                sh 'docker-compose -f ./docker/compose.yaml up -d'
+                sh 'sudo docker-compose -f ./docker/compose.yaml up -d'
                }
             }
         }
