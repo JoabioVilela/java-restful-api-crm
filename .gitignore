@@ -1,8 +1,9 @@
 HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Comentei as 4 linhas abaixo para que o diretório target não seja ignorado nos commits e push de modo que o Jenkins tenha acesso a ele.
+# target/
+# !.mvn/wrapper/maven-wrapper.jar
+# !**/src/main/**/target/
+# !**/src/test/**/target/
 
 ### STS ###
 .apt_generated

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.joabio.crm.CrmApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.49 s -- in com.joabio.crm.CrmApplicationTests
