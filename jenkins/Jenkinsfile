@@ -13,6 +13,12 @@ pipeline {
             }
         }
 
+        stage('Verify Workspace') {
+            steps {
+                sh 'pwd && ls -al'
+            }
+        }
+
         stage('Set up MySQL') {
            steps {
             script {
