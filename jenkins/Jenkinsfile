@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // sh './scripts/build.sh'
                 sh echo "Building project..."
-                sh mvn clean package -DskipTests
+                sh mvn clean package
             }
         }
         stage('Test') {
