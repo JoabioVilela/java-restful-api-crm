@@ -74,6 +74,7 @@ pipeline {
             steps {
                 sh 'docker push joabio/my-crm-service:latest'
             }
+        }
         stage('Deploy to Kubernetes') {
             steps {
                 sh './scripts/deploy.sh'
