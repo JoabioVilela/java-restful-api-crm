@@ -28,7 +28,7 @@ public class NotificacaoSmsRabbitMqService {
             client
         );
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao enviar mensagem para RabbitMQ - " + e.getMessage());
+            throw new RuntimeException("Erro ao enviar mensagem para RabbitMQ para o cliente com ID: " + client.getId() + "\nA mensagem de erro é: " + e.getMessage());
         }
    }
 

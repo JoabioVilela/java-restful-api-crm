@@ -78,7 +78,7 @@ public class ClientService {
         clientRepository.findByCpf(clientRequestDTO.cpf()).stream()
                 .filter(c -> c.getStatus().equals(Status.ACTIVE))
                 .findAny().ifPresent(c -> {
-                    throw new BusinessException("A client with cpf " + clientRequestDTO.cpf() + " already exists.");
+                    throw new BusinessException("Um cliente com CPF " + clientRequestDTO.cpf() + " já existe.");
                 });
         Client client = clientMapper.toModel(clientRequestDTO);
         client.setStatus(Status.ACTIVE);
