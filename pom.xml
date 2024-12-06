@@ -125,7 +125,7 @@
 				<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version> <!-- Atualize para a versão mais recente -->
+				<version>3.13.0</version> <!-- Atualize para a versão mais recente -->
 				<configuration>
 					<release>21</release>
 				</configuration>
