@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'docker build -t crm'
+                sh 'docker build -t crm .'
             }
         }
         stage('List Files 2') {
