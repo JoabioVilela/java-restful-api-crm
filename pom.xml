@@ -11,6 +11,7 @@
 	<groupId>com.joabio</groupId>
 	<artifactId>crm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>crm</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
