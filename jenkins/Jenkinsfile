@@ -19,6 +19,13 @@ pipeline {
                 sh './scripts/test.sh'
             }
         }
+        stage('List Files') {
+            steps {
+                script {
+                    sh 'ls -al ./target'
+                    }
+            }
+        }
         stage('Docker Build') {
             steps {
                 sh 'docker build -t my-crm-service:latest -f ./docker/Dockerfile .'
@@ -40,13 +47,5 @@ pipeline {
                 sh './scripts/deploy.sh'
             }
         }
-        stage('List Files') {
-            steps {
-                script {
-                    sh 'ls -al ./target'
-                    }
-            }
-        }
-
     }
 }
