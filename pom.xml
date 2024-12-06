@@ -127,6 +127,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.13.0</version> <!-- Atualize para a versão mais recente -->
 				<configuration>
+					<source>21</source>
+            		<target>21</target>
 					<release>21</release>
 				</configuration>
 			</plugin>
