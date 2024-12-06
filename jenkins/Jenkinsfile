@@ -31,7 +31,7 @@ pipeline {
                 sh 'docker build -t my-crm-service:latest -f ./docker/Dockerfile .'
             }
         }
-        stage('List Files') {
+        stage('List Files 2') {
             steps {
                 script {
                     sh 'ls -al ./target'
