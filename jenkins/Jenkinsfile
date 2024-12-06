@@ -31,6 +31,13 @@ pipeline {
                 sh 'docker build -t my-crm-service:latest -f ./docker/Dockerfile .'
             }
         }
+        stage('List Files') {
+            steps {
+                script {
+                    sh 'ls -al ./target'
+                    }
+            }
+        }
         stage('Push Image') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
