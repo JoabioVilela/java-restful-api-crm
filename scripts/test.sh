@@ -6,10 +6,7 @@ echo "Executando testes JUnit..."
 # Exibe erros e termina a execução em caso de falha
 set -e
 
-# Primeiro, faça o build do projeto sem limpar a pasta 'target'
-mvn package -DskipTests
-
-# Agora, execute os testes
+# Apenas executa os testes sem gerar o arquivo JAR novamente
 mvn test
 
 # Captura o status do comando Maven

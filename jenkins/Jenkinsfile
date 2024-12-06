@@ -2,7 +2,7 @@
 pipeline {
     agent any
     stages {
-        stage('Check Java Version') {
+        /* stage('Check Java Version') {
             steps {
                 sh 'java -version'
             }
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh 'pwd && ls -al'
             }
-        }
+        } */
 
         stage('Set up MySQL') {
            steps {
@@ -36,25 +36,25 @@ pipeline {
                 sh './scripts/test.sh'
             }
         }
-        stage('List Files') {
+        /* stage('List Files') {
             steps {
                 script {
                     sh 'ls -al ./target'
                     }
             }
-        }
+        } */
         stage('Docker Build') {
             steps {
-                sh 'docker build -t crm -f ./docker/Dockerfile .'
+                sh 'docker build -t my-crm-service:latest -f ./docker/Dockerfile .'
             }
         }
-        stage('List Files 2') {
+       /*  stage('List Files 2') {
             steps {
                 script {
                     sh 'ls -al ./target'
                     }
             }
-        }
+        } */
         stage('Push Image') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
