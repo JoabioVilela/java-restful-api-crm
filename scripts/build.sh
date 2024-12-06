@@ -4,4 +4,4 @@
 echo "Building project..."
 # mvn clean package -DskipTests
 mvn clean package
-mvn clean install
+./mvnw clean install -X
