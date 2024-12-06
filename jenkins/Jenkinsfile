@@ -55,17 +55,25 @@ pipeline {
                     }
             }
         } */
-        stage('Push Image') {
+        stage('Tag Docker Image') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                    sh '''
-                        docker login -u $DOCKER_USER -p $DOCKER_PASS
-                        docker tag my-crm-service:latest joabio/my-crm-service:latest
-                        docker push joabio/my-crm-service:latest
-                    '''
+                script {
+                    // Agora a imagem deve existir e o comando de tag deve funcionar
+                    sh 'docker tag my-crm-service:latest joabio/my-crm-service:latest'
                 }
             }
         }
+        stage('Login Docker Hub') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh 'docker login -u $DOCKER_USER -p $DOCKER_PASS'
+                }
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                sh 'docker push joabio/my-crm-service:latest'
+            }
         stage('Deploy to Kubernetes') {
             steps {
                 sh './scripts/deploy.sh'
