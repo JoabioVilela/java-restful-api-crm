@@ -5,7 +5,7 @@ pipeline {
         stage('Set up MySQL') {
            steps {
             script {
-                sh 'sudo docker-compose -f ./docker/compose.yaml up -d'
+                sh 'sudo docker-compose -f ./compose.yaml up -d'
                }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'docker build -t my-crm-service:latest -f ./docker/Dockerfile .'
+                sh 'docker build -t my-crm-service:latest -f ./Dockerfile .'
             }
         }
         stage('List Files 2') {

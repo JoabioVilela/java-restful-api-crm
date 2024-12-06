@@ -1,4 +1,3 @@
-# Dockerfile genérico para microsserviços
 FROM openjdk:17-jdk-slim
 
 WORKDIR /app
