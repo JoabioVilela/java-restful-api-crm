@@ -14,7 +14,6 @@ pipeline {
                 // sh './scripts/build.sh'
                 sh echo "Building project..."
                 sh ./mvn clean package -DskipTests
-                sh 'ls -l target/'
             }
         }
         stage('Test') {
