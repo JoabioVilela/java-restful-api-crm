@@ -7,6 +7,12 @@ pipeline {
                 sh 'java -version'
             }
         }
+        stage('Check Maven Version') {
+            steps {
+                sh 'mvn -version'
+            }
+        }
+
         stage('Set up MySQL') {
            steps {
             script {
