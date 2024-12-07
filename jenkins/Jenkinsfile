@@ -1,10 +1,10 @@
 
 pipeline {
     agent any
-    environment {
+   /*  environment {
         MINIKUBE_HOME = '/tmp/.minikube'
         KUBECONFIG = '/tmp/.kube/config'
-    }
+    } */
     stages {
         /* stage('Check Java Version') {
             steps {
