@@ -6,6 +6,8 @@ echo "Deploying to Kubernetes..."
 echo "KUBECONFIG is set to: $KUBECONFIG"
 echo "MINIKUBE_HOME is set to: $MINIKUBE_HOME"
 
+# Configurar o ambiente no Jenkins antes de chamar comandos kubectl:
+minikube start
 echo "Contexto atual no cluster Kubernetes:"
 kubectl config current-context
 kubectl get nodes
