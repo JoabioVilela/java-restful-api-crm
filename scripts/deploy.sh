@@ -7,7 +7,7 @@ echo "KUBECONFIG is set to: $KUBECONFIG"
 echo "MINIKUBE_HOME is set to: $MINIKUBE_HOME"
 
 # Conferir permissões:
-sudo groupadd grupo_jenkins
+# sudo groupadd grupo_jenkins
 sudo usermod -aG grupo_jenkins jenkins
 sudo usermod -aG grupo_jenkins joabio
 sudo chown -R :grupo_jenkins /tmp/.kube/config
