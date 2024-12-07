@@ -7,11 +7,11 @@ echo "Deploying to Kubernetes..."
 export MINIKUBE_HOME="/tmp/.minikube"
 export KUBECONFIG="/tmp/.kube/config"
 
-# Criar diretórios necessários
+# Criar diretórios necessários para o Minikube e kubeconfig
 mkdir -p $MINIKUBE_HOME
 mkdir -p $(dirname $KUBECONFIG)
 
-# Ajustar permissões do kubeconfig
+# Garantir que o arquivo kubeconfig exista e ajustar permissões adequadamente
 sudo touch $KUBECONFIG
 sudo chown $USER:$USER $KUBECONFIG
 sudo chmod 600 $KUBECONFIG
@@ -19,17 +19,20 @@ sudo chmod 600 $KUBECONFIG
 echo "KUBECONFIG is set to: $KUBECONFIG"
 echo "MINIKUBE_HOME is set to: $MINIKUBE_HOME"
 
-# Configurar Minikube com as variáveis de ambiente já exportadas
-sudo -u joabio -i minikube start --driver=docker
+# Configurar Minikube sem passar o parâmetro `--kubeconfig`
+export MINIKUBE_HOME
+minikube start --driver=docker
+
+echo "Minikube iniciado com sucesso!"
 
 echo "Contexto atual no cluster Kubernetes:"
-sudo -u joabio -i kubectl config current-context
-sudo -u joabio -i kubectl get nodes
+kubectl config current-context
+kubectl get nodes
 
 echo "Aplicando configurações do deployment..."
-sudo -u joabio -i kubectl apply -f ./k8s/deployment.yaml
+kubectl apply -f ./k8s/deployment.yaml
 
 echo "Atualizando imagem do deployment..."
-sudo -u joabio -i kubectl set image deployment/my-crm-service my-crm-service=joabio/my-crm-service:latest
+kubectl set image deployment/my-crm-service my-crm-service=joabio/my-crm-service:latest
 
 echo "Deploy concluído com sucesso!"
