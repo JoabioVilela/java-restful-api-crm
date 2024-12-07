@@ -81,7 +81,7 @@ pipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
-                sh sudo './scripts/deploy.sh'
+                sh './scripts/deploy.sh'
             }
         }
     }
