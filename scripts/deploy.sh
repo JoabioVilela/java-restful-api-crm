@@ -3,24 +3,24 @@ set -e  # Interrompe o script em caso de erro
 
 echo "Deploying to Kubernetes..."
 
+# Configurar variáveis de ambiente para o minikube
+export MINIKUBE_HOME="/tmp/.minikube"
+export KUBECONFIG="/tmp/.kube/config"
+
 echo "KUBECONFIG is set to: $KUBECONFIG"
 echo "MINIKUBE_HOME is set to: $MINIKUBE_HOME"
 
-mkdir -p /tmp/.kube/config
+# Criar diretórios caso não existam
+mkdir -p $MINIKUBE_HOME
+mkdir -p $(dirname $KUBECONFIG)
 
-# Conferir permissões:
-# sudo groupadd grupo_jenkins
-# sudo usermod -aG grupo_jenkins jenkins
-# sudo usermod -aG grupo_jenkins joabio
-# sudo chown -R :grupo_jenkins /tmp/.kube/config
-# sudo chmod -R 777 /tmp/.kube/config
-# sudo chown $USER $HOME/.kube/config
-# sudo chmod 777 $HOME/.kube/config
-sudo chown $USER $HOME/.kube/config
-sudo chmod 777 $HOME/.kube/config
+# Ajustar permissões do kubeconfig
+sudo chown $USER:$USER $KUBECONFIG
+sudo chmod 600 $KUBECONFIG
 
 # Configurar o ambiente no Jenkins antes de chamar comandos kubectl:
-sudo -u joabio -i minikube start
+sudo -u joabio -i minikube start --driver=docker --home=$MINIKUBE_HOME --kubeconfig=$KUBECONFIG
+
 echo "Contexto atual no cluster Kubernetes:"
 sudo -u joabio -i kubectl config current-context
 sudo -u joabio -i kubectl get nodes
