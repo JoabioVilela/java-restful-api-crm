@@ -1,6 +1,6 @@
 
 #!/bin/bash
-# Deploy Script
+export KUBECONFIG=/var/lib/jenkins/.kube/config
 echo "Deploying to Kubernetes..."
 
 # kubectl apply -f kubernetes/
