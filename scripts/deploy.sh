@@ -6,16 +6,14 @@ echo "Deploying to Kubernetes..."
 echo "KUBECONFIG is set to: $KUBECONFIG"
 echo "MINIKUBE_HOME is set to: $MINIKUBE_HOME"
 
-mkdir -p /tmp/.kube
+mkdir -p /tmp/.kube/config
 
 # Conferir permissões:
 # sudo groupadd grupo_jenkins
 sudo usermod -aG grupo_jenkins jenkins
 sudo usermod -aG grupo_jenkins joabio
-# sudo chown -R :grupo_jenkins /tmp/.kube/config
-# sudo chmod -R 777 /tmp/.kube/config
-sudo chown -R :grupo_jenkins /tmp/.kube
-sudo chmod -R 777 /tmp/.kube
+sudo chown -R :grupo_jenkins /tmp/.kube/config
+sudo chmod -R 777 /tmp/.kube/config
 
 # Configurar o ambiente no Jenkins antes de chamar comandos kubectl:
 sudo -u joabio -i minikube start
