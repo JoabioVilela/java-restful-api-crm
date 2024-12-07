@@ -19,8 +19,8 @@ sudo chmod 600 $KUBECONFIG
 echo "KUBECONFIG is set to: $KUBECONFIG"
 echo "MINIKUBE_HOME is set to: $MINIKUBE_HOME"
 
-# Configurar Minikube sem conflitos com permissões padrão
-sudo -u joabio -i minikube start --driver=docker --kubeconfig=$KUBECONFIG
+# Configurar Minikube com as variáveis de ambiente já exportadas
+sudo -u joabio -i minikube start --driver=docker
 
 echo "Contexto atual no cluster Kubernetes:"
 sudo -u joabio -i kubectl config current-context
