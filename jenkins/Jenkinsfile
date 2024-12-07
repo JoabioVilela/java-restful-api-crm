@@ -72,7 +72,7 @@ pipeline {
         }
         stage('Push Docker Image') {
             steps {
-                sh 'docker push joabio/my-crm-service:latest'
+                sh 'set -x && docker push joabio/my-crm-service:latest'
             }
         }
         stage('Deploy to Kubernetes') {
