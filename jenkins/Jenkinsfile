@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         MINIKUBE_HOME = '/home/joabio/.minikube'
-        KUBECONFIG = '/home/joabio/.kube/config'
+        KUBECONFIG = '/home/joabio/.kube/config minikube start'
     }
     stages {
         /* stage('Check Java Version') {
