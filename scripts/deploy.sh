@@ -14,8 +14,9 @@ mkdir -p /tmp/.kube/config
 # sudo usermod -aG grupo_jenkins joabio
 # sudo chown -R :grupo_jenkins /tmp/.kube/config
 # sudo chmod -R 777 /tmp/.kube/config
-sudo chown $USER $HOME/.kube/config
-sudo chmod 777 $HOME/.kube/config
+# sudo chown $USER $HOME/.kube/config
+# sudo chmod 777 $HOME/.kube/config
+sudo chown $USER $HOME/.kube/config && chmod 600 $HOME/.kube/config
 
 # Configurar o ambiente no Jenkins antes de chamar comandos kubectl:
 sudo -u joabio -i minikube start
