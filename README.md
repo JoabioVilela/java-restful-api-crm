@@ -134,7 +134,7 @@ Exemplo de visualização do Swagger:
 
 ## Implementações futuras:
 
-- Testes unitários com JUnit
+- Monitoramento e Observabilidade com Prometheus e Grafana
 
 - Frontend com Angular
 
