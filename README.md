@@ -144,6 +144,12 @@ Exemplo de visualização do Swagger:
 
 - Frontend com Angular
 
+- 2 Microsserviços:
+
+    - Automação de Marketing
+    - Relatórios e Análises
+
+
 ---
 
 
