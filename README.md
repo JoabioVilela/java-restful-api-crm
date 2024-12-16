@@ -75,7 +75,6 @@ Certifique-se de que você tenha o seguinte instalado em sua máquina:
 - Docker e Docker Compose
 - Java 17+
 - Maven
-- Docker
 - Jenkins
 - Kubernetes
 
