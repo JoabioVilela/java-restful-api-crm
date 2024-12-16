@@ -16,7 +16,7 @@
 
 ## Descrição
 
-Este repositório contém uma aplicação web desenvolvida em **Java 17**, projetada para gerenciar um sistema CRM. A aplicação oferece **endpoints RESTful** que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets, com um relacionamento **OneToMany** (um cliente para muitos tickets).
+Este repositório contém uma aplicação web desenvolvida em **Java 21**, projetada para gerenciar um sistema CRM. A aplicação oferece **endpoints RESTful** que permitem realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de clientes e tickets, com um relacionamento **OneToMany** (um cliente para muitos tickets).
 
 Ao realizar um novo cadastro, uma mensagem é enviada via **RabbitMQ** para um microsserviço de notificação, que informa ao usuário vinculado ao cadastro.
 
