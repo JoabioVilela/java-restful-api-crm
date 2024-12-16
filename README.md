@@ -117,6 +117,8 @@ Ao executar, este microsserviço (Microsserviço CRM - Backend Java API RESTful)
 
 `http://localhost:9090`
 
+Observação: esta etapa está será alterada|atualizada, pois implementei pipeline CI/CD e orquestração de containeres com Docker, Jenkins e Kubernetes.
+
 ### 4. Acesse o Swagger UI
 
 A documentação interativa dos endpoints pode ser acessada em:
