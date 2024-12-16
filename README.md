@@ -73,7 +73,7 @@ A aplicação inclui recursos como:
 Certifique-se de que você tenha o seguinte instalado em sua máquina:
 
 - Docker e Docker Compose
-- Java 17+
+- Java 21+
 - Maven
 - Jenkins
 - Kubernetes
