@@ -137,7 +137,7 @@ Exemplo de visualização do Swagger:
 
 - Mensagens são gerenciadas com RabbitMQ e incluem:
   - **Dead Letter Queue** para processamento de mensagens não entregues.
-  - Dois níveis de resiliência para alta disponibilidade.
+  - 3 níveis de resiliência para alta disponibilidade.
 
 ### Relacionamentos
 
