@@ -109,7 +109,7 @@ isto é:
 
 - ### Microsserviço de Notificação (SMS):
 
-Certifique-se de clonar e executar o microsserviço de notificação, disponível no repositório: [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms).
+Certifique-se de clonar e executar o microsserviço de notificação, disponível no repositório: [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms)
 
 ### 3. Compile e execute
    
