@@ -168,7 +168,7 @@ Se precisar de suporte ou encontrar problemas, entre em contato ou abra uma **Is
 
 Atenciosamente,
 
-Joábio Vilela
+Joabio Vilela
 
 joabio.vilela@gmail.com
 
