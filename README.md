@@ -93,7 +93,7 @@ bash
 
 isto é:
 
-`git clone https://github.com/JoabioVilela/java-restful-api-crm`
+`git clone git@github.com:JoabioVilela/java-restful-api-crm.git`
 
 `cd java-restful-api-crm/docker`
 
