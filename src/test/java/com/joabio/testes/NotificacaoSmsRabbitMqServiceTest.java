@@ -1,22 +1,19 @@
 package com.joabio.testes;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.AfterEach;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.mockito.junit.jupiter.MockitoExtension;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.verify;
-
 import java.util.HashSet;
 import java.util.Set;
 
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import static org.mockito.Mockito.verify;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
 
@@ -39,6 +36,7 @@ class NotificacaoSmsRabbitMqServiceTest {
 
     private Client client, expectedClient;
     
+    @SuppressWarnings({"null", "CallToPrintStackTrace", "UseSpecificCatch", "unused"})
     @BeforeEach
     void setUp() {
         System.out.println("setUp");
@@ -91,6 +89,7 @@ class NotificacaoSmsRabbitMqServiceTest {
     }
 
     @AfterEach
+    @SuppressWarnings("unused")
     void tearDown() {
         System.out.println("tearDown");
     }

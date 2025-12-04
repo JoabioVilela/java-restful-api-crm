@@ -3,6 +3,8 @@ package com.joabio.crm.service;
 import java.util.List;
 import java.util.Objects;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -17,9 +19,6 @@ import com.joabio.crm.enums.Status;
 import com.joabio.crm.exception.BusinessException;
 import com.joabio.crm.exception.RecordNotFoundException;
 import com.joabio.crm.repository.ClientRepository;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;
@@ -37,7 +36,7 @@ public class ClientService {
     private final ClientMapper clientMapper;
     private static final Logger log = LoggerFactory.getLogger(ClientService.class);
 
-    private NotificacaoSmsRabbitMqService notificacaoSmsRabbitMqService;
+    private final NotificacaoSmsRabbitMqService notificacaoSmsRabbitMqService;
 
     public ClientService(ClientRepository clientRepository, NotificacaoSmsRabbitMqService notificacaoSmsRabbitMqService, ClientMapper clientMapper) {
         this.clientRepository = clientRepository;
@@ -65,6 +64,7 @@ public class ClientService {
         return clientRepository.findByTelefone(telefone).stream().map(clientMapper::toDTO).toList();
     }
 
+    @SuppressWarnings("null")
     public ClientDTO findById(@Positive @NotNull Long id) {
         return clientRepository.findById(id).map(clientMapper::toDTO)
                 .orElseThrow(() -> new RecordNotFoundException(id));
@@ -99,6 +99,7 @@ public class ClientService {
         }
     }
 
+    @SuppressWarnings("null")
     public ClientDTO update(@Positive @NotNull Long id, @Valid ClientRequestDTO clientRequestDTO) {
         return clientRepository.findById(id).map(actual -> {
             actual.setName(clientRequestDTO.name());
@@ -130,6 +131,7 @@ public class ClientService {
         });
     }
 
+    @SuppressWarnings("null")
     public void delete(@Positive @NotNull Long id) {
         clientRepository.delete(clientRepository.findById(id)
                 .orElseThrow(() -> new RecordNotFoundException(id)));
