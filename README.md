@@ -1,4 +1,6 @@
 # Microsserviços, Mensageria, Backend Java API RESTful - CRM (Customer Relationship Management)
+## Demonstração de funcionamento
+<img width="1680" height="1079" alt="Captura de tela funcionamento" src="https://github.com/user-attachments/assets/f1e40bb7-0034-4e22-8541-61000d6feadf" />
 
 ## Índice
 
