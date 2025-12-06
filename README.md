@@ -153,7 +153,7 @@ Exemplo de visualização do Swagger:
 
 ## Implementações futuras:
 
-- Monitoramento e Observabilidade com Prometheus e Grafana
+- Observabilidade com Grafana
 
 - Frontend com Angular
 
