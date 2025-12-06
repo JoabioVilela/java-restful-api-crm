@@ -55,6 +55,8 @@ A aplicação inclui recursos como:
 
 - **Jenkins**
 
+- **Prometheus**
+
 - **Kubernetes**
 
 ---
