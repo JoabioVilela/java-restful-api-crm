@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# Ignorar todos os arquivos .class e 
+# Ignorar todos os arquivos .class e .lst
 *.class
 *.lst
 
