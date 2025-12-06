@@ -4,8 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# Ignorar todos os arquivos .class
+# Ignorar todos os arquivos .class e 
 *.class
+*.lst
 
 ### STS ###
 .apt_generated
