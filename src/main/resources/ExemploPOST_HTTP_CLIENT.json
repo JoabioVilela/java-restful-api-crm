@@ -1,0 +1,16 @@
+{
+  "name": "Cliente Joabio",
+  "cpf": "12345455503",
+  "telefone": "22986939933",
+  "category": "Ouro",
+  "tickets": [
+    {
+      "title": "Ticket 1",
+      "descricao": "Lorem ipsum dolor sit amet. Ex sequi sapiente eos dolor aperiam non consequatur laborum hic dolore repudiandae aut placeat blanditiis. Et ducimus quidem aut voluptatum quidem aut galisum neque."
+    },
+    {
+      "title": "Ticket 2",
+      "descricao": "Lorem ipsum dolor sit amet. Ex sequi sapiente eos dolor aperiam non consequatur laborum hic dolore repudiandae aut placeat blanditiis. Et ducimus quidem aut voluptatum quidem aut galisum neque."
+    }
+  ]
+}
