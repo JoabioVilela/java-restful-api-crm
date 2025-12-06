@@ -135,7 +135,11 @@ Exemplo de visualização do Swagger:
 
 ### 5. Monitoramento com Prometheus
 
-Monitoramento configurado e funcionando. Como exemplo, há uma métrica chamada `crm.clients.created` que monitora o `Número de clientes criados` disponível em `http://localhost:9090/actuator/metrics/crm.clients.created`:
+Monitoramento configurado, implementado e funcionando.
+
+Como exemplo, há uma métrica chamada `crm.clients.created` que monitora o `Número de clientes criados`.
+
+Disponível em `http://localhost:9090/actuator/metrics/crm.clients.created`:
 
 <img width="538" height="392" alt="image" src="https://github.com/user-attachments/assets/23bf6e40-e02c-480e-8001-bc0d9fc0dfc1" />
 
