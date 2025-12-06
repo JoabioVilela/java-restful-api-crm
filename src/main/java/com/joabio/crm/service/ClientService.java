@@ -20,6 +20,7 @@ import com.joabio.crm.exception.BusinessException;
 import com.joabio.crm.exception.RecordNotFoundException;
 import com.joabio.crm.repository.ClientRepository;
 
+import io.micrometer.core.instrument.Counter;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
@@ -37,11 +38,14 @@ public class ClientService {
     private static final Logger log = LoggerFactory.getLogger(ClientService.class);
 
     private final NotificacaoSmsRabbitMqService notificacaoSmsRabbitMqService;
+    private final Counter clientCreatedCounter;
 
-    public ClientService(ClientRepository clientRepository, NotificacaoSmsRabbitMqService notificacaoSmsRabbitMqService, ClientMapper clientMapper) {
+    public ClientService(ClientRepository clientRepository, NotificacaoSmsRabbitMqService notificacaoSmsRabbitMqService,
+        ClientMapper clientMapper, Counter clientCreatedCounter) {
         this.clientRepository = clientRepository;
         this.notificacaoSmsRabbitMqService = notificacaoSmsRabbitMqService;
         this.clientMapper = clientMapper;
+        this.clientCreatedCounter = clientCreatedCounter;
     }
 
     public ClientPageDTO findAll(@PositiveOrZero int page, @Positive @Max(1000) int pageSize) {
@@ -85,6 +89,7 @@ public class ClientService {
         client.setIntegrada(false);
         clientRepository.save(client);
         notificarRabbitMQ(client);
+        clientCreatedCounter.increment();
         return clientMapper.toDTO(client);
     }
 
