@@ -1,4 +1,4 @@
-<img width="1600" height="915" alt="image" src="https://github.com/user-attachments/assets/53f9ff64-a6d5-4ac4-a9f2-9e1697a7926e" /># Microsserviços, Mensageria, Backend Java API RESTful - CRM (Customer Relationship Management)
+# Microsserviços, Mensageria, Backend Java API RESTful - CRM (Customer Relationship Management)
 ## Demonstração de funcionamento
 <img width="1680" height="1079" alt="Captura de tela funcionamento" src="https://github.com/user-attachments/assets/f1e40bb7-0034-4e22-8541-61000d6feadf" />
 
