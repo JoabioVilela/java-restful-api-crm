@@ -113,7 +113,7 @@ Certifique-se de clonar e executar o microsserviço de notificação, disponíve
    
 Ao executar, este microsserviço (Microsserviço CRM - Backend Java API RESTful) estará disponível em:
 
-`http://localhost:9090`
+`http://localhost:9091`
 
 Observação: esta etapa será alterada|atualizada, pois implementei pipeline CI/CD e orquestração de contêineres com Docker, Jenkins e Kubernetes.
 
