@@ -111,7 +111,7 @@ Certifique-se de clonar e executar o microsserviço de notificação, disponíve
 
 Observação: esta etapa será melhorada, pois implementei pipeline CI/CD e orquestração de contêineres Jenkins e Kubernetes.
 
-### 4. Acesse o Swagger UI
+### 3. Acesse o Swagger UI
 
 A documentação interativa dos endpoints pode ser acessada em:
 
@@ -121,7 +121,7 @@ Exemplo de visualização do Swagger:
 
 ![image](https://github.com/user-attachments/assets/9de90841-7058-4853-ae15-c0d96f8faa15)
 
-### 5. Monitoramento com Prometheus
+### 4. Monitoramento com Prometheus
 
 Monitoramento configurado, implementado e funcionando.
 
@@ -131,7 +131,7 @@ Disponível em `http://localhost:9090/actuator/metrics/crm.clients.created`:
 
 <img width="538" height="392" alt="image" src="https://github.com/user-attachments/assets/23bf6e40-e02c-480e-8001-bc0d9fc0dfc1" />
 
-### 6. Observabilidade com Grafana
+### 5. Observabilidade com Grafana
 
 Observabilidade configurada, implementada e funcionando.
 
