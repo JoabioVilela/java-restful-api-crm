@@ -57,7 +57,7 @@ A aplicação inclui recursos como:
 
 - **Prometheus**
 
-- **Observabilidade**
+- **Observabilidade (O11y)**
 
 - **Kubernetes**
 
