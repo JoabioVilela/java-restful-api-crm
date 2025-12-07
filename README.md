@@ -103,15 +103,13 @@ isto é:
    
 `docker compose up -d --build`
 
-Certifique-se de clonar e executar o microsserviço de notificação, disponível no repositório: [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms)
-
-### 3. Compile e execute
-   
-Ao executar, este microsserviço (Microsserviço CRM - Backend Java API RESTful) estará disponível em:
+O microsserviço (Microsserviço CRM - Backend Java API RESTful) estará disponível em:
 
 `http://localhost:9091`
 
-Observação: esta etapa será alterada|atualizada, pois implementei pipeline CI/CD e orquestração de contêineres com Docker, Jenkins e Kubernetes.
+Certifique-se de clonar e executar o microsserviço de notificação, disponível no repositório: [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms)
+
+Observação: esta etapa será melhorada, pois implementei pipeline CI/CD e orquestração de contêineres Jenkins e Kubernetes.
 
 ### 4. Acesse o Swagger UI
 
