@@ -1,0 +1,65 @@
+networks:
+  monitoring:
+  
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crm-app
+    ports:
+      - "9091:9091"
+    networks:
+      - monitoring
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=clients'
+      - 'MYSQL_PASSWORD=secret'
+      - 'MYSQL_ROOT_PASSWORD=verysecret'
+      - 'MYSQL_USER=myuser'
+    ports:
+      - '3306:3306'
+    networks:
+      - monitoring
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10  
+
+  prometheus:
+    image: 'prom/prometheus:latest'
+    container_name: 'prometheus'
+    ports:
+      - '9090:9090'
+    volumes:
+      - './prometheus:/etc/prometheus'
+    networks:
+      - monitoring
+    restart: unless-stopped
+
+  grafana:
+    image: 'grafana/grafana:latest'
+    container_name: 'grafana'
+    ports:
+      - '3000:3000'
+    environment:
+      - 'GF_SECURITY_ADMIN_USER=admin'
+      - 'GF_SECURITY_ADMIN_PASSWORD=admin'
+    networks:
+      - monitoring
+    restart: unless-stopped
+
+  rabbitmq:
+    image: 'rabbitmq:3-management'
+    container_name: 'my-rabbit'
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    networks:
+      - monitoring
