@@ -147,7 +147,7 @@ Disponível em `http://localhost:9090/actuator/metrics/crm.clients.created`:
 
 Observabilidade configurada, implementada e funcionando.
 
-Como exemplo, há uma métrica chamada `crm_clients_total`, que permite observar o `Número total de clientes criados`.
+Como exemplo, há uma métrica chamada `crm_clients_total`, que permite observar o `Número total de clientes cadastrados`.
 
 Disponível em `http://localhost:3000`:
 
