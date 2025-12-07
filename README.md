@@ -1,4 +1,4 @@
-# Microsserviços, Mensageria, Backend Java API RESTful - CRM (Customer Relationship Management)
+<img width="1600" height="915" alt="image" src="https://github.com/user-attachments/assets/53f9ff64-a6d5-4ac4-a9f2-9e1697a7926e" /># Microsserviços, Mensageria, Backend Java API RESTful - CRM (Customer Relationship Management)
 ## Demonstração de funcionamento
 <img width="1680" height="1079" alt="Captura de tela funcionamento" src="https://github.com/user-attachments/assets/f1e40bb7-0034-4e22-8541-61000d6feadf" />
 
@@ -142,6 +142,16 @@ Como exemplo, há uma métrica chamada `crm.clients.created` que monitora o `Nú
 Disponível em `http://localhost:9090/actuator/metrics/crm.clients.created`:
 
 <img width="538" height="392" alt="image" src="https://github.com/user-attachments/assets/23bf6e40-e02c-480e-8001-bc0d9fc0dfc1" />
+
+### 6. Observabilidade com Grafana
+
+Observabilidade configurada, implementada e funcionando.
+
+Como exemplo, há uma métrica chamada `crm.clients.created`, que permite observar o `Número de clientes criados`.
+
+Disponível em `http://localhost:3000`:
+
+<img width="1600" height="915" alt="image" src="https://github.com/user-attachments/assets/36d7ca82-28d4-4b00-a6d4-45357c4f3a7a" />
 
 ---
 
