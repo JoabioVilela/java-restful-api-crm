@@ -101,7 +101,7 @@ isto é:
 
 `git clone git@github.com:JoabioVilela/java-restful-api-crm.git`
 
-`cd java-restful-api-crm/docker`
+`cd java-restful-api-crm`
 
 ### 2. Inicie os serviços
    
