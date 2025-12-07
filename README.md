@@ -69,7 +69,7 @@ A aplicação inclui recursos como:
 ### Configuração
 
 - As configurações do banco de dados e RabbitMQ estão no arquivo: `src/main/resources/application-dev.properties`.
-- O arquivo `compose.yaml` na raiz do projeto contém o serviço MySQL configurado para execução com Docker Compose.
+- O arquivo `docker-compose.yaml` na raiz do projeto contém os serviços.
 
 ---
 
