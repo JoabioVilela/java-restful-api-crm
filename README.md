@@ -163,8 +163,6 @@ Disponível em `http://localhost:3000`:
 
 ## Implementações futuras:
 
-- Observabilidade com Grafana
-
 - Frontend com Angular
 
 - 2 Microsserviços:
