@@ -103,15 +103,9 @@ isto é:
 
 `cd java-restful-api-crm/docker`
 
-### 2. Inicie os serviços necessários
+### 2. Inicie os serviços
    
-- ### Banco de dados MySQL:
-
-`docker compose up -d`
-
-- ### RabbitMQ:
-
-`docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management`
+`docker compose up -d --build`
 
 - ### Microsserviço de Notificação (SMS):
 
