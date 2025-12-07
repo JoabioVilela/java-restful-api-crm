@@ -68,7 +68,7 @@ A aplicação inclui recursos como:
 
 ### Configuração
 
-- As configurações do banco de dados e RabbitMQ estão no arquivo: `src/main/resources/application-dev.properties`.
+- As configurações estão no arquivo: `src/main/resources/application-dev.properties`.
 - O arquivo `docker-compose.yaml` na raiz do projeto contém os serviços.
 
 ---
