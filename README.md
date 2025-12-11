@@ -115,7 +115,7 @@ Observação: esta etapa será melhorada, pois implementei pipeline CI/CD e orqu
 
 A documentação interativa dos endpoints pode ser acessada em:
 
-`http://localhost:9090/swagger-ui/index.html`
+`http://localhost:9091/swagger-ui/index.html`
 
 Exemplo de visualização do Swagger:
 
