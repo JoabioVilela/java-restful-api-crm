@@ -1,8 +1,6 @@
 # Microsserviços, Mensageria, Backend Java API RESTful - CRM (Customer Relationship Management)
 ## Demonstração de funcionamento
-<img width="1680" height="1079" alt="Captura de tela funcionamento" src="https://github.com/user-attachments/assets/f1e40bb7-0034-4e22-8541-61000d6feadf" />
-
-Nota: após esta captura de tela, implementei o serviço Prometheus; e devido à porta padrão do Prometheus ser ´9090´, após implementá-lo, alterei a porta do CRM para ´9091´; futuramente, vou atualizar esta captura de tela constando a porta ´9091´.
+<img width="1849" height="1077" alt="image" src="https://github.com/user-attachments/assets/92e533c8-58f7-4379-8e1b-197be4d6c7bf" />
 
 ## Índice
 
