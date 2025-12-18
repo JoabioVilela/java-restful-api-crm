@@ -2,7 +2,7 @@
 ## Demonstração de funcionamento
 <img width="1680" height="1079" alt="Captura de tela funcionamento" src="https://github.com/user-attachments/assets/f1e40bb7-0034-4e22-8541-61000d6feadf" />
 
-Nota: após esta captura de tela, implementei o serviço Prometheus; e devido à porta padrão do Prometheus ser ´9090´, após implementá-lo, alterei a porta do CRM para ´9091´; futuramente, vou atualizar esta captura de tela constando a porta '9091'.
+Nota: após esta captura de tela, implementei o serviço Prometheus; e devido à porta padrão do Prometheus ser ´9090´, após implementá-lo, alterei a porta do CRM para ´9091´; futuramente, vou atualizar esta captura de tela constando a porta ´9091´.
 
 ## Índice
 
