@@ -37,6 +37,8 @@ A aplicação inclui recursos como:
 
 ## Tecnologias e Ferramentas:
 
+- **Java 17**
+
 - **Java 21**
 
 - **RabbitMQ**
