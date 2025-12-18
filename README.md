@@ -133,7 +133,8 @@ Como exemplo, há uma métrica chamada `crm.clients.created` que monitora o `Nú
 
 Disponível em `http://localhost:9091/actuator/metrics/crm.clients.created`:
 
-<img width="538" height="392" alt="image" src="https://github.com/user-attachments/assets/23bf6e40-e02c-480e-8001-bc0d9fc0dfc1" />
+<img width="518" height="392" alt="image" src="https://github.com/user-attachments/assets/9a19b276-f0c0-4676-a895-dfd5566a5e6c" />
+
 
 ### 5. Observabilidade com Grafana
 
