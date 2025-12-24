@@ -5,7 +5,7 @@ pipeline {
         MINIKUBE_HOME = '/tmp/.minikube'
         KUBECONFIG = '/tmp/.kube/config'
     } */
-    stages {
+    //stages {
         /* stage('Check Java Version') {
             steps {
                 sh 'java -version'
@@ -23,23 +23,23 @@ pipeline {
             }
         } */
 
-        stage('Set up MySQL') {
+        /* stage('Set up MySQL') {
            steps {
             script {
                 sh 'sudo docker-compose -f ./docker/compose.yaml up -d'
                }
             }
-        }
-        stage('Build') {
+        } */
+       /*  stage('Build') {
             steps {
                 sh './scripts/build.sh'
             }
-        }
-        stage('Test') {
+        } */
+        /* stage('Test') {
             steps {
                 sh './scripts/test.sh'
             }
-        }
+        } */
         /* stage('List Files') {
             steps {
                 script {
@@ -47,11 +47,11 @@ pipeline {
                     }
             }
         } */
-        stage('Docker Build') {
+        /* stage('Docker Build') {
             steps {
                 sh 'docker build -t my-crm-service:latest -f ./docker/Dockerfile .'
             }
-        }
+        } */
        /*  stage('List Files 2') {
             steps {
                 script {
@@ -59,30 +59,30 @@ pipeline {
                     }
             }
         } */
-        stage('Tag Docker Image') {
+        /* stage('Tag Docker Image') {
             steps {
                 script {
                     // Agora a imagem deve existir e o comando de tag deve funcionar
                     sh 'docker tag my-crm-service:latest joabio/my-crm-service:latest'
                 }
             }
-        }
-        stage('Login Docker Hub') {
+        } */
+        /* stage('Login Docker Hub') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh 'docker login -u $DOCKER_USER -p $DOCKER_PASS'
                 }
             }
-        }
-        stage('Push Docker Image') {
+        } */
+        /* stage('Push Docker Image') {
             steps {
                 sh 'set -x && docker push joabio/my-crm-service:latest'
             }
-        }
-        stage('Deploy to Kubernetes') {
+        } */
+        /* stage('Deploy to Kubernetes') {
             steps {
                 sh './scripts/deploy.sh'
             }
-        }
-    }
+        } */
+    //}
 }
