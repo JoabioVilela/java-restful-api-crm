@@ -31,6 +31,7 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 20s
       retries: 10
+    restart: unless-stopped
 
   prometheus:
     image: 'prom/prometheus:latest'
@@ -65,3 +66,16 @@ services:
       - '15672:15672'
     networks:
       - monitoring
+    restart: unless-stopped
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes: 
+      - ./jenkins_data:/var/jenkins_home
+    networks:
+      - monitoring
+    restart: unless-stopped
