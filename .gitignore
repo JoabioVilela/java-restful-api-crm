@@ -3,6 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+jenkins_data
 
 # Ignorar todos os arquivos .class e .lst
 *.class
