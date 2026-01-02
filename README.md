@@ -172,6 +172,12 @@ Disponível em `http://localhost:3000`:
     - Automação de Marketing
     - Relatórios e Análises
 
+---
+
+## Sugestão de referência literária:
+
+https://medium.com/sicreditech/sistemas-distribu%C3%ADdos-conceito-e-defini%C3%A7%C3%B5es-f2baa4efc88d
+
 
 ---
 
