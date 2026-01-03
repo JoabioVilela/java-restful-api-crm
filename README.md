@@ -178,7 +178,7 @@ Disponível em `http://localhost:3000`:
 
 Artigo texto sobre Sistemas Distribuídos
 
-https://medium.com/sicreditech/sistemas-distribu%C3%ADdos-conceito-e-defini%C3%A7%C3%B5es-f2baa4efc88d
+[Link para artigo texto educativo sobre Sistemas Distribuídos](https://medium.com/sicreditech/sistemas-distribu%C3%ADdos-conceito-e-defini%C3%A7%C3%B5es-f2baa4efc88d)
 
 
 ---
