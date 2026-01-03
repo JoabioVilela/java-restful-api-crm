@@ -176,9 +176,9 @@ Disponível em `http://localhost:3000`:
 
 ## Sugestão de referência literária:
 
-Artigo texto sobre Sistemas Distribuídos
+Artigo texto educativo sobre Sistemas Distribuídos
 
-[Link para artigo texto educativo sobre Sistemas Distribuídos](https://medium.com/sicreditech/sistemas-distribu%C3%ADdos-conceito-e-defini%C3%A7%C3%B5es-f2baa4efc88d)
+[Clique aqui para acessar](https://medium.com/sicreditech/sistemas-distribu%C3%ADdos-conceito-e-defini%C3%A7%C3%B5es-f2baa4efc88d)
 
 
 ---
