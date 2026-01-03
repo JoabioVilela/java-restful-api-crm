@@ -163,7 +163,7 @@ Disponível em `http://localhost:3000`:
 ---
 
 
-## Implementações futuras:
+## Implementações futuras
 
 - Frontend com Angular
 
@@ -174,7 +174,7 @@ Disponível em `http://localhost:3000`:
 
 ---
 
-## Sugestões de artigos texto para leituras educativas:
+## Sugestões de artigos texto para leituras educativas
 
 [O que é, para que serve e o valor do CRM](https://medium.com/guia-empreendedor/o-que-%C3%A9-para-que-serve-e-o-valor-do-crm-ca012e2cbd58)
 
