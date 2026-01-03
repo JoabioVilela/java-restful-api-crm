@@ -174,12 +174,11 @@ Disponível em `http://localhost:3000`:
 
 ---
 
-## Sugestão de referência literária:
+## Sugestões de artigos texto para leituras educativas:
 
-Artigo texto educativo sobre Sistemas Distribuídos
+[O que é, para que serve e o valor do CRM](https://medium.com/guia-empreendedor/o-que-%C3%A9-para-que-serve-e-o-valor-do-crm-ca012e2cbd58)
 
-[Clique aqui para acessar](https://medium.com/sicreditech/sistemas-distribu%C3%ADdos-conceito-e-defini%C3%A7%C3%B5es-f2baa4efc88d)
-
+[Sistemas Distribuídos: Conceito e Definições](https://medium.com/sicreditech/sistemas-distribu%C3%ADdos-conceito-e-defini%C3%A7%C3%B5es-f2baa4efc88d)
 
 ---
 
