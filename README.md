@@ -98,7 +98,7 @@ bash
 
 isto é:
 
-`git clone git@github.com:JoabioVilela/java-restful-api-crm.git`
+`git clone git@github.com:JoabioVilela/crm-messaging-microservices.git`
 
 `cd java-restful-api-crm`
 
