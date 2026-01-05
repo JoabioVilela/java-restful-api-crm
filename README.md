@@ -110,7 +110,7 @@ O microsserviço (Microsserviço CRM - Backend Java API RESTful) estará dispon�
 
 `http://localhost:9091`
 
-Certifique-se de clonar e executar o microsserviço de notificação, disponível no repositório: [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacaosms)
+Certifique-se de clonar e executar o microsserviço de notificação, disponível no repositório: [https://github.com/JoabioVilela/notificacaosms](https://github.com/JoabioVilela/notificacao-sms)
 
 Observação: esta etapa será melhorada, pois implementei pipeline CI/CD e orquestração de contêineres Jenkins e Kubernetes.
 
