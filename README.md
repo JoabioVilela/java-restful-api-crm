@@ -178,6 +178,8 @@ Disponível em `http://localhost:3000`:
 
 [O que é, para que serve e o valor do CRM](https://medium.com/guia-empreendedor/o-que-%C3%A9-para-que-serve-e-o-valor-do-crm-ca012e2cbd58)
 
+[Gestão de relacionamento com o cliente](https://pt.wikipedia.org/wiki/Gest%C3%A3o_de_relacionamento_com_o_cliente)
+
 [Sistemas Distribuídos: Conceito e Definições](https://medium.com/sicreditech/sistemas-distribu%C3%ADdos-conceito-e-defini%C3%A7%C3%B5es-f2baa4efc88d)
 
 ---
