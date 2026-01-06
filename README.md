@@ -128,9 +128,9 @@ Exemplo de visualização do Swagger:
 
 Monitoramento configurado, implementado e funcionando.
 
-Como exemplo, há uma métrica chamada `crm.clients.created` que monitora o `Número de clientes criados`.
+Como exemplo, há uma métrica chamada `crm.clients.created` que monitora o `Número de clientes criados`
 
-Disponível em `http://localhost:9091/actuator/metrics/crm.clients.created`:
+Disponível em `http://localhost:9091/actuator/metrics/crm.clients.created`
 
 <img width="518" height="392" alt="image" src="https://github.com/user-attachments/assets/9a19b276-f0c0-4676-a895-dfd5566a5e6c" />
 
@@ -146,7 +146,7 @@ Atribua o nome e porta do serviço prometheus, conforme Docker Compose, ao campo
 <img width="744" height="613" alt="image" src="https://github.com/user-attachments/assets/d4ffafeb-a7d9-44f2-886f-b3eafa76603e" />
 
 
-Como exemplo, há uma métrica chamada `crm_clients_total`, que permite observar o `Número total de clientes cadastrados`:
+Como exemplo, há uma métrica chamada `crm_clients_total`, que permite observar o `Número total de clientes cadastrados`
 
 <img width="1600" height="915" alt="image" src="https://github.com/user-attachments/assets/36d7ca82-28d4-4b00-a6d4-45357c4f3a7a" />
 
