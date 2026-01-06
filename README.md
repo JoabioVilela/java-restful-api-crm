@@ -110,6 +110,12 @@ O microsserviço (Microsserviço CRM - Backend Java API RESTful) estará dispon�
 
 `http://localhost:9091`
 
+No ato da inicialização é realizado o cadastro de alguns clientes. Veja em:
+
+`http://localhost:9091/api/clients`
+
+<img width="1602" height="1074" alt="image" src="https://github.com/user-attachments/assets/4725d874-e346-4253-857a-f5d418e9beee" />
+
 Certifique-se de clonar e inicializar o microsserviço de notificação SMS, disponível no repositório: [https://github.com/JoabioVilela/notificacao-sms](https://github.com/JoabioVilela/notificacao-sms)
 
 Observação: esta etapa será melhorada, pois implementei pipeline CI/CD e orquestração de contêineres Jenkins e Kubernetes.
