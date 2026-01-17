@@ -17,7 +17,7 @@
 
 
 
-## Descrição (após adicionar githubPush, testar webhook push on main run pipeline jenkins x github)
+## Descrição
 
 Este repositório contém uma aplicação web desenvolvida em **Java 21**, projetada para gerenciar um sistema CRM. Nela, há 2 microsserviços:
 
