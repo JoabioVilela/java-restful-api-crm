@@ -100,7 +100,7 @@ isto é:
 
 `git clone git@github.com:JoabioVilela/crm-messaging-microservices.git`
 
-`cd java-restful-api-crm`
+`cd crm-messaging-microservices`
 
 ### 2. Inicie os serviços
    
