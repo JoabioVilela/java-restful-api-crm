@@ -17,7 +17,7 @@
 
 
 
-## Descrição
+## Descrição (teste jenkins x github)
 
 Este repositório contém uma aplicação web desenvolvida em **Java 21**, projetada para gerenciar um sistema CRM. Nela, há 2 microsserviços:
 
