@@ -5,9 +5,16 @@ pipeline {
     stages { 
         stage('Checkout') {
             steps {
-                checkout scm
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[
+                        url: 'https://github.com/JoabioVilela/crm-messaging-microservices.git',
+                        credentialsId: 'github-token'
+                    ]]
+                ])
             }
-        }
+        } 
         stage('Build Image') {
             steps {
                 script {
