@@ -126,7 +126,7 @@ isto é:
    
 `docker compose up -d --build`
 
-O microsserviço (Microsserviço CRM - Backend Java API RESTful) estará disponível em:
+O microsserviço (Microsserviço CRM Messaging - Backend Java API RESTful) estará disponível em:
 
 `http://localhost:9091`
 
