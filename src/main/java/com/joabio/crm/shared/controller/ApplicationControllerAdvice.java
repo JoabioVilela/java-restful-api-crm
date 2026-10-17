@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.joabio.crm.exception.InvalidPageException;
 import com.joabio.crm.exception.InvalidPageSizeException;
 import com.joabio.crm.exception.RecordNotFoundException;
+import com.joabio.crm.exception.BusinessException;
 
 import jakarta.validation.ConstraintViolationException;
 
@@ -34,6 +35,12 @@ public class ApplicationControllerAdvice {
         BindingResult result = ex.getBindingResult();
         final List<FieldError> fieldErrors = result.getFieldErrors();
         return fieldErrors.toArray(new FieldError[0]);
+    }
+
+    @ExceptionHandler(BusinessException.class)
+    @ResponseStatus(HttpStatus.CONFLICT)
+    public String handleBusinessException(BusinessException e) {
+        return e.getMessage();
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
